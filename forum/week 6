@@ -1,0 +1,34 @@
+# Python Code
+
+def is_right_triangle(angle1, angle2, angle3):
+    # Verify that the sum of all angles is 180 degrees.
+    angle_sum = angle1 + angle2 + angle3
+    if angle_sum == 180:
+        # Check if one of the angles is 90 degrees.
+        if angle1 == 90 or angle2 == 90 or angle3 == 90:
+            return True
+    return False
+
+# Example usage:
+angle1 = 30
+angle2 = 60
+angle3 = 90
+
+if is_right_triangle(angle1, angle2, angle3):
+    print("The given angles form a right triangle.")
+else:
+    print("The given angles do not form a right triangle.")
+
+#Prolog
+% Define a predicate to check if a triangle is a right triangle.
+is_right_triangle(Angle1, Angle2, Angle3) :-
+    % Verify that the sum of all angles is 180 degrees.
+    Sum is Angle1 + Angle2 + Angle3,
+    Sum = 180,
+    % Check if one of the angles is 90 degrees.
+    (Angle1 = 90 ; Angle2 = 90 ; Angle3 = 90).
+
+% Example usage:
+% To check if a triangle with angles 30, 60, and 90 degrees is a right triangle:
+% is_right_triangle(30, 60, 90).
+
